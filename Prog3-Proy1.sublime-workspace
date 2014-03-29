@@ -1,0 +1,758 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ta",
+				"tabla_user"
+			],
+			[
+				"mw",
+				"min-width"
+			],
+			[
+				"em",
+				"empty"
+			],
+			[
+				"ca",
+				"campo"
+			],
+			[
+				"nom",
+				"nom_foto"
+			],
+			[
+				"el",
+				"elseif	elseif …"
+			],
+			[
+				"ge",
+				"_GET"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"clo",
+				"close"
+			],
+			[
+				"eli",
+				"eliminar"
+			],
+			[
+				"if",
+				"if	if …"
+			],
+			[
+				"nomb",
+				"nombre_db"
+			],
+			[
+				"inc",
+				"incl1	include_once …"
+			],
+			[
+				"_",
+				"_GET"
+			],
+			[
+				"arra_k",
+				"array_key_exists"
+			],
+			[
+				"wile",
+				"while	while …"
+			],
+			[
+				"nombre",
+				"nombre_campo"
+			],
+			[
+				"con",
+				"cont"
+			],
+			[
+				"cons",
+				"Consulta"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"c",
+				"consultaUno"
+			],
+			[
+				"mt_",
+				"mt_rand"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"f",
+				"foreach	foreach …"
+			],
+			[
+				"e",
+				"echo	echo \"…\""
+			],
+			[
+				"pass",
+				"pass"
+			],
+			[
+				"tabla",
+				"tabla_user"
+			],
+			[
+				"po",
+				"pos-r	position: relative;"
+			],
+			[
+				"bz",
+				"bxz-cb	box-sizing: content-box;"
+			],
+			[
+				"ff",
+				"ff-f	font-family: fantasy;"
+			],
+			[
+				"p",
+				"pass"
+			],
+			[
+				"err",
+				"error_reporting"
+			],
+			[
+				"tal",
+				"tal-l	text-align-last: left;"
+			],
+			[
+				"fw",
+				"fw-br	font-weight: bolder;"
+			],
+			[
+				"di",
+				"d-ib	display: inline-block;"
+			],
+			[
+				"b",
+				"bd+	border: ${1:1px} ${2:solid} ${3:#000};"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"bgz",
+				"bgsz-a	background-size: auto;"
+			],
+			[
+				"tr",
+				"trf	transform"
+			],
+			[
+				"d",
+				"d-b	display: block;"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"log",
+				"login"
+			],
+			[
+				"br",
+				"border-radius"
+			],
+			[
+				"bs",
+				"box-shadow"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"pr",
+				"pos-r	position: relative;"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"wo",
+				"wow	word-wrap"
+			],
+			[
+				"tw",
+				"tw-n	text-wrap: normal;"
+			],
+			[
+				"bgr",
+				"bgr-n	background-repeat: no-repeat;"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"borc",
+				"border-color"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"d-",
+				"d-ib	display: inline-block;"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"arr",
+				"arregloAsociativo"
+			],
+			[
+				"a",
+				"arregloNumerico"
+			],
+			[
+				"jsalvag",
+				"jsalvag"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"pro",
+				"Profesores"
+			],
+			[
+				"wr",
+				"writeln"
+			],
+			[
+				"lista",
+				"listaP"
+			],
+			[
+				"ve",
+				"verMaterias"
+			],
+			[
+				"Pro",
+				"Profesor"
+			],
+			[
+				"mater",
+				"MATERIAS"
+			],
+			[
+				"str",
+				"String"
+			],
+			[
+				"ho",
+				"horario"
+			],
+			[
+				"var",
+				"Var"
+			],
+			[
+				"ma",
+				"Maestria"
+			],
+			[
+				"mate",
+				"MATERIAS"
+			],
+			[
+				"cl",
+				"clrscr"
+			],
+			[
+				"prof",
+				"profesion"
+			],
+			[
+				"s",
+				"sel"
+			],
+			[
+				"re",
+				"readln"
+			],
+			[
+				"Inge",
+				"Ingenieros"
+			],
+			[
+				"lis",
+				"listaP"
+			],
+			[
+				"Profe",
+				"Profesores"
+			],
+			[
+				"li",
+				"lic"
+			],
+			[
+				"can",
+				"CANT_P"
+			],
+			[
+				"elimi",
+				"Eliminar"
+			],
+			[
+				"wri",
+				"writeln"
+			],
+			[
+				"in",
+				"indice"
+			],
+			[
+				"inte",
+				"Integer"
+			],
+			[
+				"proc",
+				"procedure	procedure"
+			],
+			[
+				"clas",
+				"clase"
+			],
+			[
+				"wl",
+				"writeln"
+			],
+			[
+				"read",
+				"readkey"
+			],
+			[
+				"show",
+				"ShowMessage"
+			],
+			[
+				"auxi",
+				"auxliriar"
+			],
+			[
+				"aux",
+				"auxiliar"
+			],
+			[
+				"conta",
+				"contador"
+			],
+			[
+				"lee",
+				"leerArchivo"
+			],
+			[
+				"t",
+				"txt"
+			],
+			[
+				"si",
+				"siguiente"
+			],
+			[
+				"au",
+				"auxiliar"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 335.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 386.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Descargas/numero.txt",
+		"/C/Users/JSalvaG/Documentos/mama",
+		"/C/Users/JSalvaG/Documents/Visual Studio 2012/Projects/Prog3-clase1/Prog3-clase1/C_ESTUDIANTES.cs",
+		"/C/Users/JSalvaG/Desktop/asd.cs",
+		"/D/torrent.txt",
+		"/D/OSs/clave_WIN8.txt",
+		"/C/xampp/htdocs/php/practica01/db/mysql.class.php",
+		"/C/xampp/htdocs/php/practica01/db/paginado.php",
+		"/C/xampp/htdocs/php/practica01/user/index.php",
+		"/C/xampp/htdocs/php/practica01/user/usuario.class.php",
+		"/C/xampp/htdocs/php/practica01/user/mysql.class.php",
+		"/C/xampp/htdocs/php/practica01/user/sqlite3.class.php",
+		"/C/xampp/htdocs/php/practica01/usuario.php",
+		"/C/xampp/htdocs/php/SQLite/conex.php",
+		"/C/xampp/htdocs/php/practica01/top.php",
+		"/C/xampp/htdocs/php/practica01/contacto.php",
+		"/C/xampp/htdocs/php/practica01/css/estilos.css",
+		"/C/xampp/htdocs/php/practica01/registro.php",
+		"/C/xampp/htdocs/php/practica01/index.php",
+		"/C/xampp/htdocs/php/practica01/tanteaki.db",
+		"/C/xampp/htdocs/php/practica01/sqlie3.php",
+		"/C/xampp/htdocs/php/practica01/enviamail.php",
+		"/C/xampp/htdocs/MiProyecto/server.php",
+		"/D/Descargas/bootstrap-3.0.3/docs-assets/css/docs.css",
+		"/C/xampp/htdocs/php/index.php",
+		"/C/xampp/htdocs/php/practica01/home.php",
+		"/C/xampp/htdocs/php/practica01/css/top.php",
+		"/C/xampp/htdocs/php/practica01/login.php",
+		"/C/xampp/htdocs/php/principal.php",
+		"/C/xampp/htdocs/php/clientes/cajas.php",
+		"/C/xampp/htdocs/php/css/estilo01.css",
+		"/C/xampp/htdocs/php/css/carrusel.css",
+		"/C/xampp/htdocs/php/img/logo01.svg",
+		"/D/Descargas/bootstrap-3.0.3/examples/carousel/carousel.css",
+		"/C/xampp/htdocs/php/phpinfo.php",
+		"/C/Users/JSalvaG/Pictures/banner01.jpg",
+		"/C/xampp/htdocs/php/css",
+		"/C/xampp/htdocs/php/Clases.php",
+		"/D/Programas/Sublime Text 2.0.2/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Programas/Sublime Text 2.0.2/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/xampp/htdocs/php/SQLite/datos.php",
+		"/C/xampp/htdocs/php/GetPost.php",
+		"/C/xampp/htdocs/php/arreglos.php",
+		"/C/xampp/htdocs/php/SQLite/datos.db",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/htdocs/pruebaLara/app/views/hello.php",
+		"/C/xampp/htdocs/pruebaLara/app/routes.php",
+		"/C/xampp/htdocs/pruebaLara/public/assets/js/admin.js",
+		"/C/xampp/htdocs/pruebaLara/app/views/admin/errors.blade.php",
+		"/C/xampp/htdocs/pruebaLara/app/config/mail.php",
+		"/C/xampp/htdocs/pruebaLara/app/views/pagination.php",
+		"/C/xampp/htdocs/pruebaLara/vendor/laravel/framework/src/Illuminate/Pagination/views/slider.php",
+		"/C/xampp/htdocs/pruebaLara/app/config/view.php",
+		"/C/xampp/htdocs/pruebaLara/app/lang/es/home.php",
+		"/C/xampp/htdocs/pruebaLara/app/config/app.php",
+		"/C/xampp/htdocs/pruebaLara/app/views/template.blade.php",
+		"/C/xampp/htdocs/pruebaLara/app/views/layout.blade.php",
+		"/C/xampp/htdocs/pruebaLara/app/views/jsalvag.php",
+		"/C/xampp/htdocs/pruebaLara/app/controllers/ItalianController.php",
+		"/C/xampp/htdocs/pruebaLara/app/views/menu.blade.php",
+		"/C/xampp/htdocs/pruebaLara/app/start/global.php",
+		"/C/xampp/htdocs/pruebaLara/app/models/PastaRepo",
+		"/C/xampp/htdocs/pruebaLara/app/models/PastaRepoInterface.php",
+		"/controllers/ItalianController.php",
+		"/C/xampp/htdocs/pruebaLara/app/views/home/index.php",
+		"/C/xampp/htdocs/pruebaLara/app/lang/en/home.php",
+		"/C/xampp/htdocs/pruebaLara/app/translation.php",
+		"/C/xampp/htdocs/pruebaLara/app/database/migrations/2013_12_09_232837_create_user_table.php",
+		"/C/Windows/System32/Drivers/etc/hosts",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/C/xampp/htdocs/pruebaLara/app/config/database.php",
+		"/C/xampp/htdocs/index.html",
+		"/C/xampp/htdocs/index.php",
+		"/C/xampp/htdocs/applications.html",
+		"/C/xampp/htdocs/MiProyecto/bootstrap/start.php",
+		"/C/xampp/htdocs/xampp/cds.php",
+		"/C/xampp/htdocs/www/miweb.php",
+		"/C/Users/JSalvaG/Desktop/miweb.php",
+		"/C/xampp/php/php5.ini",
+		"/C/Users/JSalvaG/Documents/GitHub/ProyectoProg1-Muchachas/nose.pas",
+		"/D/Juegos/The.Harvest.MULTI5-ALiAS/Instrucciones.txt",
+		"/C/Users/JSalvaG/Documents/GitHub/CppFinal/Clases.h",
+		"/D/Descargas/MPSOFTWARE.phpDesigner.v8.1.2.10.Portable.MULTILINGUAL-CRD/MPSOFTWARE.phpDesigner.v8.1.2.10.Portable.MULTILINGUAL-CRD/Instrucciones.txt",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre I Oct-Dic-2012/ArteCultura/Corte_1/ProblemDesarrolloNacReg/Investigacion Problematica.txt",
+		"/C/Users/JSalvaG/Documents/GitHub/ContadorBibliotecario/Biblioteca/pseudo.txt",
+		"/C/Users/JSalvaG/Documentos/20111202-carta-cantv.txt",
+		"/D/Programas/Sublime Text 2.0.2/Data/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/D/Programas/Sublime Text 2.0.2/Data/Packages/User/JSON.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Double",
+			"double",
+			"cemail",
+			"$c",
+			"submit",
+			"\"",
+			"text",
+			"\"",
+			"<div",
+			"pass",
+			"nom",
+			"resultAll",
+			"width",
+			"wid",
+			"id",
+			"consultaUno",
+			"cons",
+			"							",
+			"$id",
+			"\\r\\n",
+			",",
+			"$",
+			"($",
+			"$",
+			"nom",
+			"\"",
+			"traesTodo",
+			"h1",
+			"hola",
+			"\"",
+			"th",
+			"tUser",
+			"id",
+			"base",
+			"datos",
+			"consultaDel",
+			"consultaEdit",
+			"Edit",
+			"nombre",
+			"br",
+			"fila",
+			"\\t",
+			"div",
+			"key",
+			"foreach",
+			"td",
+			"command",
+			"3",
+			"200",
+			"3",
+			"dato",
+			"label",
+			"password",
+			"emailv",
+			"email",
+			"nom",
+			"clavev",
+			"text",
+			"correov",
+			"correo",
+			"apellido",
+			"nombre",
+			"img",
+			"regresar",
+			"div",
+			"enviar",
+			"*/",
+			"/*",
+			"background-color",
+			"absolute",
+			"tr",
+			"absolute",
+			"25px",
+			"1.3",
+			".98",
+			"home",
+			"value",
+			"78",
+			"he",
+			"_POST",
+			"125",
+			"span",
+			"-block",
+			"lightgreen",
+			"tab",
+			"tab_size",
+			"host",
+			"Host",
+			"host",
+			"Host",
+			"host",
+			"Host",
+			"host",
+			"Host",
+			"host",
+			"Host",
+			"host",
+			"VirtualHost",
+			"esp",
+			"ci",
+			"procedure",
+			"PROCEDURE",
+			"function",
+			"FUNCTION",
+			"fHorario",
+			"Profesion",
+			"lic",
+			"Profesion",
+			"Licenciados",
+			"lic",
+			"prof",
+			"Modificar",
+			"indice",
+			"indice+1",
+			"Martes",
+			"        ",
+			"                ",
+			"        ",
+			"              ",
+			"        ",
+			"                ",
+			"        ",
+			"                        ",
+			"                                ",
+			"                                        ",
+			"                                                ",
+			"                                        ",
+			"                                "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/JSalvaG/Desktop/proyectos/gallera.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 164.0,
+	"status_bar_visible": true
+}
