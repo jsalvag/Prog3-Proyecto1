@@ -32,5 +32,16 @@ namespace Prog3_Proyecto1
                 return true;
             }
         }
+
+        public bool llenarListaAlquiler(C_ALQUILER alq)
+        {
+            if (listaAlquiler.Contains(alq))
+                return false;
+            else
+            {
+                listaAlquiler.Add(alq);
+                return true;
+            }
+        }
     }
 }

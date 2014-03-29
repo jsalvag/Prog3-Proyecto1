@@ -13,7 +13,9 @@ namespace Prog3_Proyecto1
             modelo,
             condicion;
         private double
-            km;
+            km,
+            precioDia,
+            precioSeguro;
 
         private int
             anio;
@@ -21,7 +23,7 @@ namespace Prog3_Proyecto1
         private bool
             estado;
 
-        public C_VEHICULOS(string placa,string marca,string modelo,string condicion,string km,string anio)
+        public C_VEHICULOS(string placa,string marca,string modelo,string condicion,string km,string anio,string precioDia,string precioSeguro)
         {
             this.placa = placa;
             this.marca = marca;
@@ -36,6 +38,14 @@ namespace Prog3_Proyecto1
             else
                 this.anio = Convert.ToInt16(anio);
             this.estado = true;
+            if (precioDia == "")
+                this.precioDia = 0;
+            else
+                this.precioDia =Convert.ToDouble(precioDia);
+            if (precioSeguro == "")
+                this.precioSeguro = 0;
+            else
+                this.precioSeguro = Convert.ToDouble(precioSeguro);
         }
 
         
@@ -45,6 +55,31 @@ namespace Prog3_Proyecto1
                 return true;
             else
                 return false;
+        }
+
+        public string[] datos()
+        {
+            string[] data = new string[9];
+            data[0] = this.placa;
+            data[1] = this.marca;
+            data[2] = this.modelo;
+            data[3] = Convert.ToString(this.anio);
+            data[4] = Convert.ToString(this.km);
+            data[5] = this.condicion;
+            if(this.estado)
+                data[6] = "Disponible";
+            else
+                data[6] = "En Alquiler";
+            data[7] = Convert.ToString(this.precioDia);
+            data[8] = Convert.ToString(this.precioSeguro);
+            return data;
+        }
+
+        public bool comaprarCarros(string placa)
+        {
+            if (placa == this.placa)
+                return true;
+            return false;
         }
     }
 }
