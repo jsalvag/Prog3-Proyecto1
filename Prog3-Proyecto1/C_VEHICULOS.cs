@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Prog3_Proyecto1
 {
-    class C_VEHICULOS:IEquatable<C_VEHICULOS>
+    public class C_VEHICULOS:IEquatable<C_VEHICULOS>
     {
         private string
             placa,

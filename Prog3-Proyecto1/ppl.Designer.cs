@@ -42,7 +42,6 @@
             this.regCli_pan = new System.Windows.Forms.Panel();
             this.clrCli_btn = new System.Windows.Forms.Button();
             this.regCli_btn = new System.Windows.Forms.Button();
-            this.telf_box = new System.Windows.Forms.TextBox();
             this.dir_box = new System.Windows.Forms.TextBox();
             this.ape_box = new System.Windows.Forms.TextBox();
             this.nom_box = new System.Windows.Forms.TextBox();
@@ -55,9 +54,6 @@
             this.regVehi_pan = new System.Windows.Forms.Panel();
             this.clrVehi_btn = new System.Windows.Forms.Button();
             this.regVehi_btn = new System.Windows.Forms.Button();
-            this.km_box = new System.Windows.Forms.TextBox();
-            this.condi_box = new System.Windows.Forms.TextBox();
-            this.anio_box = new System.Windows.Forms.TextBox();
             this.model_box = new System.Windows.Forms.TextBox();
             this.marca_box = new System.Windows.Forms.TextBox();
             this.placa_box = new System.Windows.Forms.TextBox();
@@ -67,6 +63,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.anio_box = new System.Windows.Forms.MaskedTextBox();
+            this.km_box = new System.Windows.Forms.MaskedTextBox();
+            this.telf_box = new System.Windows.Forms.MaskedTextBox();
+            this.condi_box = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.regCli_pan.SuspendLayout();
             this.regVehi_pan.SuspendLayout();
@@ -158,9 +159,9 @@
             // 
             // regCli_pan
             // 
+            this.regCli_pan.Controls.Add(this.telf_box);
             this.regCli_pan.Controls.Add(this.clrCli_btn);
             this.regCli_pan.Controls.Add(this.regCli_btn);
-            this.regCli_pan.Controls.Add(this.telf_box);
             this.regCli_pan.Controls.Add(this.dir_box);
             this.regCli_pan.Controls.Add(this.ape_box);
             this.regCli_pan.Controls.Add(this.nom_box);
@@ -194,13 +195,6 @@
             this.regCli_btn.Text = "Registrar";
             this.regCli_btn.UseVisualStyleBackColor = true;
             this.regCli_btn.Click += new System.EventHandler(this.registrar_btn_Click);
-            // 
-            // telf_box
-            // 
-            this.telf_box.Location = new System.Drawing.Point(64, 87);
-            this.telf_box.Name = "telf_box";
-            this.telf_box.Size = new System.Drawing.Size(100, 20);
-            this.telf_box.TabIndex = 21;
             // 
             // dir_box
             // 
@@ -277,11 +271,11 @@
             // 
             // regVehi_pan
             // 
+            this.regVehi_pan.Controls.Add(this.condi_box);
+            this.regVehi_pan.Controls.Add(this.km_box);
+            this.regVehi_pan.Controls.Add(this.anio_box);
             this.regVehi_pan.Controls.Add(this.clrVehi_btn);
             this.regVehi_pan.Controls.Add(this.regVehi_btn);
-            this.regVehi_pan.Controls.Add(this.km_box);
-            this.regVehi_pan.Controls.Add(this.condi_box);
-            this.regVehi_pan.Controls.Add(this.anio_box);
             this.regVehi_pan.Controls.Add(this.model_box);
             this.regVehi_pan.Controls.Add(this.marca_box);
             this.regVehi_pan.Controls.Add(this.placa_box);
@@ -291,7 +285,7 @@
             this.regVehi_pan.Controls.Add(this.label8);
             this.regVehi_pan.Controls.Add(this.label7);
             this.regVehi_pan.Controls.Add(this.label6);
-            this.regVehi_pan.Location = new System.Drawing.Point(15, 27);
+            this.regVehi_pan.Location = new System.Drawing.Point(15, 184);
             this.regVehi_pan.Name = "regVehi_pan";
             this.regVehi_pan.Size = new System.Drawing.Size(169, 167);
             this.regVehi_pan.TabIndex = 2;
@@ -315,27 +309,6 @@
             this.regVehi_btn.Text = "Registrar";
             this.regVehi_btn.UseVisualStyleBackColor = true;
             this.regVehi_btn.Click += new System.EventHandler(this.regVehi_btn_Click);
-            // 
-            // km_box
-            // 
-            this.km_box.Location = new System.Drawing.Point(64, 111);
-            this.km_box.Name = "km_box";
-            this.km_box.Size = new System.Drawing.Size(100, 20);
-            this.km_box.TabIndex = 23;
-            // 
-            // condi_box
-            // 
-            this.condi_box.Location = new System.Drawing.Point(64, 90);
-            this.condi_box.Name = "condi_box";
-            this.condi_box.Size = new System.Drawing.Size(100, 20);
-            this.condi_box.TabIndex = 22;
-            // 
-            // anio_box
-            // 
-            this.anio_box.Location = new System.Drawing.Point(64, 69);
-            this.anio_box.Name = "anio_box";
-            this.anio_box.Size = new System.Drawing.Size(100, 20);
-            this.anio_box.TabIndex = 21;
             // 
             // model_box
             // 
@@ -361,7 +334,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 114);
+            this.label11.Location = new System.Drawing.Point(3, 115);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 13);
             this.label11.TabIndex = 5;
@@ -412,11 +385,60 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Placa:";
             // 
+            // anio_box
+            // 
+            this.anio_box.Location = new System.Drawing.Point(64, 69);
+            this.anio_box.Mask = "9999";
+            this.anio_box.Name = "anio_box";
+            this.anio_box.Size = new System.Drawing.Size(100, 20);
+            this.anio_box.TabIndex = 21;
+            // 
+            // km_box
+            // 
+            this.km_box.Location = new System.Drawing.Point(64, 112);
+            this.km_box.Mask = "9999999";
+            this.km_box.Name = "km_box";
+            this.km_box.Size = new System.Drawing.Size(100, 20);
+            this.km_box.TabIndex = 23;
+            // 
+            // telf_box
+            // 
+            this.telf_box.Location = new System.Drawing.Point(64, 87);
+            this.telf_box.Mask = "(9999)000-0000";
+            this.telf_box.Name = "telf_box";
+            this.telf_box.Size = new System.Drawing.Size(100, 20);
+            this.telf_box.TabIndex = 24;
+            // 
+            // condi_box
+            // 
+            this.condi_box.FormattingEnabled = true;
+            this.condi_box.Items.AddRange(new object[] {
+            "Nuevo",
+            "Exelente",
+            "Bueno",
+            "Regular",
+            "Malo"});
+            this.condi_box.Location = new System.Drawing.Point(64, 90);
+            this.condi_box.Name = "condi_box";
+            this.condi_box.Size = new System.Drawing.Size(99, 21);
+            this.condi_box.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(53, 357);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "reportes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ppl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(200, 387);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.regVehi_pan);
             this.Controls.Add(this.regCli_pan);
             this.Controls.Add(this.menu);
@@ -452,7 +474,6 @@
         private System.Windows.Forms.Panel regCli_pan;
         private System.Windows.Forms.Button clrCli_btn;
         private System.Windows.Forms.Button regCli_btn;
-        private System.Windows.Forms.TextBox telf_box;
         private System.Windows.Forms.TextBox dir_box;
         private System.Windows.Forms.TextBox ape_box;
         private System.Windows.Forms.TextBox nom_box;
@@ -469,14 +490,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox km_box;
-        private System.Windows.Forms.TextBox condi_box;
-        private System.Windows.Forms.TextBox anio_box;
         private System.Windows.Forms.TextBox model_box;
         private System.Windows.Forms.TextBox marca_box;
         private System.Windows.Forms.TextBox placa_box;
         private System.Windows.Forms.Button clrVehi_btn;
         private System.Windows.Forms.Button regVehi_btn;
+        private System.Windows.Forms.MaskedTextBox anio_box;
+        private System.Windows.Forms.MaskedTextBox km_box;
+        private System.Windows.Forms.MaskedTextBox telf_box;
+        private System.Windows.Forms.ComboBox condi_box;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Prog3_Proyecto1
 {
-    class C_ALQUILER
+    public class C_ALQUILER
     {
         private string
-            ci,
-            placa;
+            ciA,
+            placaA;
 
         private DateTime
             f_alquiler;
@@ -22,8 +22,8 @@ namespace Prog3_Proyecto1
 
         public C_ALQUILER(string ci,string placa,DateTime f_alquiler,float monto,int dias)
         {
-            this.ci = ci;
-            this.placa = placa;
+            this.ciA = ci;
+            this.placaA = placa;
             this.f_alquiler = f_alquiler;
             this.monto = monto;
             this.dias = dias;

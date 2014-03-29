@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Prog3_Proyecto1
 {
-    class C_CLIENTES : IEquatable<C_CLIENTES>
+    public class C_CLIENTES : IEquatable<C_CLIENTES>
     {
         private string
             ci,
@@ -31,6 +31,22 @@ namespace Prog3_Proyecto1
                 return true;
             else
                 return false;
+        }
+
+        public string verDatos()
+        {
+            return "Cedula: " + this.ci + "\tNombre: " + this.ape + ", " + this.nom + "\tTeléfono: " + this.telf + "\tDireccón: " + this.dir;
+        }
+
+        public string[] datos()
+        {
+            string[] data = new string[5];
+            data[0] = this.ci;
+            data[1] = this.nom;
+            data[2] = this.ape;
+            data[3] = this.dir;
+            data[4] = this.telf;
+            return data;
         }
     }
 }

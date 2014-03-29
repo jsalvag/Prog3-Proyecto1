@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Prog3_Proyecto1
 {
-    class C_LISTAS
+    public class C_LISTAS
     {
         public List<C_CLIENTES> listaClientes = new List<C_CLIENTES>();
         public List<C_VEHICULOS> listaVehiculos = new List<C_VEHICULOS>();
