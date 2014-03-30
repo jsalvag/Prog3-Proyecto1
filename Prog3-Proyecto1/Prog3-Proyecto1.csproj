@@ -61,9 +61,12 @@
     <Compile Include="Listados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes.Designer.cs">
+    <Compile Include="Listados.Designer.cs">
       <DependentUpon>Listados.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Listados.resx">
+      <DependentUpon>Listados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ppl.resx">
       <DependentUpon>ppl.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,9 +79,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reportes.resx">
-      <DependentUpon>Listados.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

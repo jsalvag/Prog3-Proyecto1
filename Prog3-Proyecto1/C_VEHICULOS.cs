@@ -48,13 +48,22 @@ namespace Prog3_Proyecto1
                 this.precioSeguro = Convert.ToDouble(precioSeguro);
         }
 
-        
         public bool Equals(C_VEHICULOS other)
         {
             if (this.placa == other.placa)
                 return true;
             else
                 return false;
+        }
+
+        public string getPlaca()
+        {
+            return this.placa;
+        }
+
+        public void setEstado(bool estado)
+        {
+            this.estado = estado;
         }
 
         public string[] datos()
@@ -81,5 +90,7 @@ namespace Prog3_Proyecto1
                 return true;
             return false;
         }
+
+        public void setKm(double km) { this.km = km; }
     }
 }

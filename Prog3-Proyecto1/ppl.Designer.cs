@@ -31,11 +31,8 @@
             this.menu = new System.Windows.Forms.MenuStrip();
             this.cientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.disponibilidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alquilarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recibirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,6 +70,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.regAalq_pan = new System.Windows.Forms.Panel();
+            this.calcMonto_btn = new System.Windows.Forms.Button();
             this.dias_mbox = new System.Windows.Forms.MaskedTextBox();
             this.clrAlq_btn = new System.Windows.Forms.Button();
             this.regAlq_btn = new System.Windows.Forms.Button();
@@ -85,11 +83,26 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.calcMonto_btn = new System.Windows.Forms.Button();
+            this.recib_pan = new System.Windows.Forms.Panel();
+            this.recKm_box = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.recMonto_box = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.recDias_box = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.recNom_box = new System.Windows.Forms.TextBox();
+            this.clrRec_btn = new System.Windows.Forms.Button();
+            this.recib_btn = new System.Windows.Forms.Button();
+            this.recVehi_cbox = new System.Windows.Forms.ComboBox();
+            this.recFecha_dtp = new System.Windows.Forms.DateTimePicker();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.regCli_pan.SuspendLayout();
             this.regVehi_pan.SuspendLayout();
             this.regAalq_pan.SuspendLayout();
+            this.recib_pan.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -100,15 +113,14 @@
             this.alquilerToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(202, 24);
+            this.menu.Size = new System.Drawing.Size(203, 24);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
             // cientesToolStripMenuItem
             // 
             this.cientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem,
-            this.buscarToolStripMenuItem});
+            this.registrarToolStripMenuItem});
             this.cientesToolStripMenuItem.Name = "cientesToolStripMenuItem";
             this.cientesToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.cientesToolStripMenuItem.Text = "Cientes";
@@ -120,18 +132,10 @@
             this.registrarToolStripMenuItem.Text = "Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
-            // buscarToolStripMenuItem
-            // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.buscarToolStripMenuItem.Text = "Buscar";
-            // 
             // vehiculosToolStripMenuItem
             // 
             this.vehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem1,
-            this.buscarToolStripMenuItem1,
-            this.disponibilidadToolStripMenuItem});
+            this.registrarToolStripMenuItem1});
             this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
             this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.vehiculosToolStripMenuItem.Text = "Vehiculos";
@@ -142,18 +146,6 @@
             this.registrarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.registrarToolStripMenuItem1.Text = "Registrar";
             this.registrarToolStripMenuItem1.Click += new System.EventHandler(this.registrarToolStripMenuItem1_Click);
-            // 
-            // buscarToolStripMenuItem1
-            // 
-            this.buscarToolStripMenuItem1.Name = "buscarToolStripMenuItem1";
-            this.buscarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.buscarToolStripMenuItem1.Text = "Buscar";
-            // 
-            // disponibilidadToolStripMenuItem
-            // 
-            this.disponibilidadToolStripMenuItem.Name = "disponibilidadToolStripMenuItem";
-            this.disponibilidadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.disponibilidadToolStripMenuItem.Text = "Disponibilidad";
             // 
             // alquilerToolStripMenuItem
             // 
@@ -176,6 +168,7 @@
             this.recibirToolStripMenuItem.Name = "recibirToolStripMenuItem";
             this.recibirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.recibirToolStripMenuItem.Text = "Recibir";
+            this.recibirToolStripMenuItem.Click += new System.EventHandler(this.recibirToolStripMenuItem_Click);
             // 
             // regCli_pan
             // 
@@ -490,9 +483,9 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(0, 251);
+            this.button1.Location = new System.Drawing.Point(0, 249);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 23);
+            this.button1.Size = new System.Drawing.Size(203, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Listados";
             this.button1.UseVisualStyleBackColor = true;
@@ -518,6 +511,16 @@
             this.regAalq_pan.Size = new System.Drawing.Size(169, 209);
             this.regAalq_pan.TabIndex = 4;
             this.regAalq_pan.Visible = false;
+            // 
+            // calcMonto_btn
+            // 
+            this.calcMonto_btn.Location = new System.Drawing.Point(58, 97);
+            this.calcMonto_btn.Name = "calcMonto_btn";
+            this.calcMonto_btn.Size = new System.Drawing.Size(51, 23);
+            this.calcMonto_btn.TabIndex = 7;
+            this.calcMonto_btn.Text = "Calcular";
+            this.calcMonto_btn.UseVisualStyleBackColor = true;
+            this.calcMonto_btn.Click += new System.EventHandler(this.calcMonto_btn_Click);
             // 
             // dias_mbox
             // 
@@ -627,21 +630,160 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Fecha:";
             // 
-            // calcMonto_btn
+            // recib_pan
             // 
-            this.calcMonto_btn.Location = new System.Drawing.Point(58, 97);
-            this.calcMonto_btn.Name = "calcMonto_btn";
-            this.calcMonto_btn.Size = new System.Drawing.Size(51, 23);
-            this.calcMonto_btn.TabIndex = 7;
-            this.calcMonto_btn.Text = "Calcular";
-            this.calcMonto_btn.UseVisualStyleBackColor = true;
-            this.calcMonto_btn.Click += new System.EventHandler(this.calcMonto_btn_Click);
+            this.recib_pan.Controls.Add(this.recKm_box);
+            this.recib_pan.Controls.Add(this.label24);
+            this.recib_pan.Controls.Add(this.recMonto_box);
+            this.recib_pan.Controls.Add(this.label21);
+            this.recib_pan.Controls.Add(this.recDias_box);
+            this.recib_pan.Controls.Add(this.label19);
+            this.recib_pan.Controls.Add(this.recNom_box);
+            this.recib_pan.Controls.Add(this.clrRec_btn);
+            this.recib_pan.Controls.Add(this.recib_btn);
+            this.recib_pan.Controls.Add(this.recVehi_cbox);
+            this.recib_pan.Controls.Add(this.recFecha_dtp);
+            this.recib_pan.Controls.Add(this.label20);
+            this.recib_pan.Controls.Add(this.label23);
+            this.recib_pan.Controls.Add(this.label22);
+            this.recib_pan.Location = new System.Drawing.Point(15, 27);
+            this.recib_pan.Name = "recib_pan";
+            this.recib_pan.Size = new System.Drawing.Size(169, 209);
+            this.recib_pan.TabIndex = 5;
+            this.recib_pan.Visible = false;
+            // 
+            // recKm_box
+            // 
+            this.recKm_box.Location = new System.Drawing.Point(64, 113);
+            this.recKm_box.Name = "recKm_box";
+            this.recKm_box.Size = new System.Drawing.Size(100, 20);
+            this.recKm_box.TabIndex = 2;
+            this.recKm_box.TextChanged += new System.EventHandler(this.recKm_box_TextChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(2, 116);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 13);
+            this.label24.TabIndex = 23;
+            this.label24.Text = "Kilometraje:";
+            // 
+            // recMonto_box
+            // 
+            this.recMonto_box.Enabled = false;
+            this.recMonto_box.Location = new System.Drawing.Point(64, 92);
+            this.recMonto_box.Name = "recMonto_box";
+            this.recMonto_box.Size = new System.Drawing.Size(100, 20);
+            this.recMonto_box.TabIndex = 7;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(23, 95);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(40, 13);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Monto:";
+            // 
+            // recDias_box
+            // 
+            this.recDias_box.Enabled = false;
+            this.recDias_box.Location = new System.Drawing.Point(64, 71);
+            this.recDias_box.Name = "recDias_box";
+            this.recDias_box.Size = new System.Drawing.Size(100, 20);
+            this.recDias_box.TabIndex = 6;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(32, 74);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(31, 13);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "Dias:";
+            // 
+            // recNom_box
+            // 
+            this.recNom_box.Enabled = false;
+            this.recNom_box.Location = new System.Drawing.Point(64, 50);
+            this.recNom_box.Name = "recNom_box";
+            this.recNom_box.Size = new System.Drawing.Size(100, 20);
+            this.recNom_box.TabIndex = 5;
+            // 
+            // clrRec_btn
+            // 
+            this.clrRec_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.clrRec_btn.Location = new System.Drawing.Point(109, 183);
+            this.clrRec_btn.Name = "clrRec_btn";
+            this.clrRec_btn.Size = new System.Drawing.Size(54, 23);
+            this.clrRec_btn.TabIndex = 4;
+            this.clrRec_btn.Text = "Limpiar";
+            this.clrRec_btn.UseVisualStyleBackColor = true;
+            this.clrRec_btn.Click += new System.EventHandler(this.clrRec_btn_Click);
+            // 
+            // recib_btn
+            // 
+            this.recib_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.recib_btn.Enabled = false;
+            this.recib_btn.Location = new System.Drawing.Point(5, 183);
+            this.recib_btn.Name = "recib_btn";
+            this.recib_btn.Size = new System.Drawing.Size(58, 23);
+            this.recib_btn.TabIndex = 3;
+            this.recib_btn.Text = "Recibir";
+            this.recib_btn.UseVisualStyleBackColor = true;
+            this.recib_btn.Click += new System.EventHandler(this.recib_btn_Click);
+            // 
+            // recVehi_cbox
+            // 
+            this.recVehi_cbox.FormattingEnabled = true;
+            this.recVehi_cbox.Location = new System.Drawing.Point(64, 28);
+            this.recVehi_cbox.Name = "recVehi_cbox";
+            this.recVehi_cbox.Size = new System.Drawing.Size(100, 21);
+            this.recVehi_cbox.TabIndex = 1;
+            this.recVehi_cbox.SelectedIndexChanged += new System.EventHandler(this.recVehi_cbox_SelectedIndexChanged);
+            // 
+            // recFecha_dtp
+            // 
+            this.recFecha_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.recFecha_dtp.Location = new System.Drawing.Point(64, 7);
+            this.recFecha_dtp.Name = "recFecha_dtp";
+            this.recFecha_dtp.Size = new System.Drawing.Size(100, 20);
+            this.recFecha_dtp.TabIndex = 0;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 31);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(51, 13);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Vehiculo:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(23, 11);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(40, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Fecha:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(21, 53);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(42, 13);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "Cliente:";
             // 
             // ppl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(202, 274);
+            this.ClientSize = new System.Drawing.Size(203, 272);
+            this.Controls.Add(this.recib_pan);
             this.Controls.Add(this.regAalq_pan);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.regVehi_pan);
@@ -659,6 +801,8 @@
             this.regVehi_pan.PerformLayout();
             this.regAalq_pan.ResumeLayout(false);
             this.regAalq_pan.PerformLayout();
+            this.recib_pan.ResumeLayout(false);
+            this.recib_pan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,11 +813,8 @@
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem cientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem disponibilidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alquilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alquilarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recibirToolStripMenuItem;
@@ -724,6 +865,21 @@
         private System.Windows.Forms.DateTimePicker f_alq_dtp;
         private System.Windows.Forms.MaskedTextBox dias_mbox;
         private System.Windows.Forms.Button calcMonto_btn;
+        private System.Windows.Forms.Panel recib_pan;
+        private System.Windows.Forms.TextBox recMonto_box;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox recDias_box;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox recNom_box;
+        private System.Windows.Forms.Button clrRec_btn;
+        private System.Windows.Forms.Button recib_btn;
+        private System.Windows.Forms.ComboBox recVehi_cbox;
+        private System.Windows.Forms.DateTimePicker recFecha_dtp;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox recKm_box;
+        private System.Windows.Forms.Label label24;
     }
 }
 

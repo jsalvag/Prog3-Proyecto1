@@ -16,6 +16,18 @@ namespace Prog3_Proyecto1
         public ppl()
         {
             InitializeComponent();
+            
+            listas.llenarListaCliente(new C_CLIENTES("16825525", "Jose", "Guevara", "Porlamar", "04168995399"));
+            listas.llenarListaCliente(new C_CLIENTES("3489436", "Maria", "Marcano", "Porlamar", "04168885555"));
+            listas.llenarListaCliente(new C_CLIENTES("13655092", "Claudia", "Muñoz", "La Asumcion", "04145554433"));
+            listas.llenarListaCliente(new C_CLIENTES("11111111", "Luis", "Contreras", "Juangriego", "02951112233"));
+            listas.llenarListaCliente(new C_CLIENTES("65432187", "Pedro", "Perez", "Pampatar", "04126543298"));
+
+            listas.llenarListaVehiculos(new C_VEHICULOS("654asd", "Toyota", "Yaris", "Nuevo", "0", "2014", "1000", "6000"));
+            listas.llenarListaVehiculos(new C_VEHICULOS("321qwe", "Toyota", "Corolla", "Nuevo", "0", "2014", "1500", "9000"));
+            listas.llenarListaVehiculos(new C_VEHICULOS("987zxc", "Toyota", "Yaris", "Bueno", "100000", "2006", "600", "4000"));
+            listas.llenarListaVehiculos(new C_VEHICULOS("963qaz", "Chevrolet", "Corsa", "Exelente", "60000", "2010", "800", "4000"));
+            listas.llenarListaVehiculos(new C_VEHICULOS("852wsx", "Chevrolet", "Aveo", "Nuevo", "0", "2014", "1000", "6000"));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,24 +38,27 @@ namespace Prog3_Proyecto1
 
         private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            regCli_pan.Visible = false;
-            regAalq_pan.Visible = false;
-            regVehi_pan.Visible = true;
+            regCli_pan.Hide();
+            regAalq_pan.Hide();
+            recib_pan.Hide();
+            regVehi_pan.Show();
             placa_box.Focus();
         }
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            regVehi_pan.Visible = false;
-            regAalq_pan.Visible = false;
-            regCli_pan.Visible = true;
+            regVehi_pan.Hide();
+            regAalq_pan.Hide();
+            recib_pan.Hide();
+            regCli_pan.Show();
             ci_box.Focus();
         }
 
         private void alquilarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            regVehi_pan.Visible = false;
-            regCli_pan.Visible = false;
+            regVehi_pan.Hide();
+            regCli_pan.Hide();
+            recib_pan.Hide();
             f_alq_dtp.Value = DateTime.Now;
             cli_cbox.Items.Clear();
             vehi_cbox.Items.Clear();
@@ -55,8 +70,21 @@ namespace Prog3_Proyecto1
                 if(vehi.datos()[6]=="Disponible")
                     vehi_cbox.Items.Add(vehi.datos()[0]);
 
-            regAalq_pan.Visible = true;
+            regAalq_pan.Show();
             cli_cbox.Focus();
+        }
+
+        private void recibirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            regVehi_pan.Hide();
+            regCli_pan.Hide();
+            regAalq_pan.Hide();
+            recVehi_cbox.Items.Clear();
+            recVehi_cbox.Text = "";
+            recib_pan.Show();
+            foreach (C_VEHICULOS vehi in ppl.listas.listaVehiculos)
+                if (vehi.datos()[6] == "En Alquiler")
+                    recVehi_cbox.Items.Add(vehi.datos()[0]);
         }
 
         private void registrar_btn_Click(object sender, EventArgs e)
@@ -65,7 +93,7 @@ namespace Prog3_Proyecto1
             {
                 if (listas.llenarListaCliente(new C_CLIENTES(ci_box.Text, nom_box.Text, ape_box.Text, dir_box.Text, telf_box.Text)))
                 {
-                    regCli_pan.Visible = false;
+                    regCli_pan.Hide();
                     ci_box.Clear();
                     nom_box.Clear();
                     ape_box.Clear();
@@ -92,7 +120,7 @@ namespace Prog3_Proyecto1
             
                 if (listas.llenarListaVehiculos(new C_VEHICULOS(placa_box.Text, marca_box.Text, model_box.Text, condi_box.Text, km_box.Text, anio_box.Text,dia_box.Text,seg_box.Text)))
                 {
-                    regVehi_pan.Visible = false;
+                    regVehi_pan.Hide();
                     placa_box.Clear();
                     marca_box.Clear();
                     model_box.Clear();
@@ -102,7 +130,7 @@ namespace Prog3_Proyecto1
                     dia_box.Clear();
                     seg_box.Clear();
 
-                    regAalq_pan.Visible = false;
+                    regAalq_pan.Hide();
                 }
                 else
                 {
@@ -121,19 +149,29 @@ namespace Prog3_Proyecto1
         {
             string ci;
             if(f_alq_dtp.Value >= DateTime.Today)
-                if(cli_cbox.SelectedIndex >= 0)
-                    if(Convert.ToInt16(dias_mbox.Text) >=1)
+                if (cli_cbox.SelectedIndex >= 0)
+                    if(Convert.ToInt16(dias_mbox.Text) > 0)
                         if (vehi_cbox.SelectedIndex >= 0)
                         {
                             ci = cli_cbox.Text.Split('-')[0];
-
+                            //if(listas.listaClientes.Contains(
                             if (listas.llenarListaAlquiler(new C_ALQUILER(ci, vehi_cbox.Text, f_alq_dtp.Value, Convert.ToDouble(monto_box.Text), Convert.ToInt16(dias_mbox.Text))))
+                            {
+                                C_VEHICULOS ent = listas.listaVehiculos.FirstOrDefault(o => o.getPlaca() == vehi_cbox.Text); //otro metodo para buscar un objeto conparando propiedades
+                                ent.setEstado(false);
                                 regAalq_pan.Hide();
+                                f_alq_dtp.Value = DateTime.Today;
+                                cli_cbox.Text = "";
+                                dias_mbox.Clear();
+                                vehi_cbox.Text = "";
+                                monto_box.Clear();
+                            }
                         }
                         else
                         {
                             MessageBox.Show("Debe seleccionar un vehiculo de la lista");
-                            vehi_cbox.Focus();
+                            regAalq_pan.Hide();
+                            regVehi_pan.Show();
                         }
                     else
                     {
@@ -181,7 +219,7 @@ namespace Prog3_Proyecto1
 
         private void clrAlq_btn_Click(object sender, EventArgs e)
         {
-            f_alq_dtp.Value = DateTime.Now;
+            f_alq_dtp.Value = DateTime.Today;
             cli_cbox.Text = "";
             dias_mbox.Clear();
             vehi_cbox.Text = "";
@@ -220,6 +258,56 @@ namespace Prog3_Proyecto1
                 MessageBox.Show("Debe definir los dias de alquiler");
                 dias_mbox.Focus();
             }
+        }
+
+        private void recVehi_cbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            C_ALQUILER ent = listas.listaAlquiler.FirstOrDefault(o => o.getPlaca() == recVehi_cbox.Text);
+            C_CLIENTES cli = listas.listaClientes.FirstOrDefault(c => c.datos()[0] == ent.datos()[0]);
+            C_VEHICULOS vei = listas.listaVehiculos.First(v => v.datos()[0] == ent.datos()[1]);
+            recNom_box.Text = cli.datos()[0] + "- " + cli.datos()[1] + " " + cli.datos()[2];
+            recDias_box.Text = Convert.ToString(recFecha_dtp.Value.Date - ent.getFecha().Date).Split('.')[0];
+            if(recDias_box.Text == "00:00:00")
+                recDias_box.Text = "0";
+            recMonto_box.Text = Convert.ToString((Convert.ToDouble(vei.datos()[7]) * Convert.ToInt16(recDias_box.Text) ) + Convert.ToDouble(vei.datos()[8]));
+            recKm_box.Text = vei.datos()[4];
+
+            recib_btn.Enabled = true;
+        }
+
+        private void recib_btn_Click(object sender, EventArgs e)
+        {
+            C_ALQUILER ent = listas.listaAlquiler.FirstOrDefault(o => o.getPlaca() == recVehi_cbox.Text);
+            C_VEHICULOS vei = listas.listaVehiculos.First(v => v.datos()[0] == ent.datos()[1]);
+            ent.setDias(Convert.ToInt16(recDias_box.Text));
+            ent.setMonto(Convert.ToDouble(recMonto_box.Text));
+            vei.setEstado(true);
+            vei.setKm(Convert.ToDouble(recKm_box.Text));
+            recib_pan.Hide();
+
+            recFecha_dtp.Value = DateTime.Today;
+            recVehi_cbox.Items.Clear();
+            recNom_box.Clear();
+            recDias_box.Clear();
+            recMonto_box.Clear();
+            recKm_box.Clear();
+        }
+
+        private void clrRec_btn_Click(object sender, EventArgs e)
+        {
+            recFecha_dtp.Value = DateTime.Today;
+            recVehi_cbox.Text = "";
+            recNom_box.Clear();
+            recDias_box.Clear();
+            recMonto_box.Clear();
+            recKm_box.Clear();
+
+            recVehi_cbox.Focus();
+        }
+
+        private void recKm_box_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

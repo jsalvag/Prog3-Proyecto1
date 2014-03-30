@@ -11,13 +11,13 @@ namespace Prog3_Proyecto1
         public List<C_VEHICULOS> listaVehiculos = new List<C_VEHICULOS>();
         public List<C_ALQUILER> listaAlquiler = new List<C_ALQUILER>();
 
-        public bool llenarListaCliente(C_CLIENTES cliente)
+        public bool llenarListaCliente(C_CLIENTES cli)
         {
-            if (listaClientes.Contains(cliente))
+            if (listaClientes.Contains(cli))
                 return false;
             else
             {
-                listaClientes.Add(cliente);
+                listaClientes.Add(cli);
                 return true;
             }
         }

@@ -33,11 +33,6 @@ namespace Prog3_Proyecto1
                 return false;
         }
 
-        public string verDatos()
-        {
-            return "Cedula: " + this.ci + "\tNombre: " + this.ape + ", " + this.nom + "\tTeléfono: " + this.telf + "\tDireccón: " + this.dir;
-        }
-
         public string[] datos()
         {
             string[] data = new string[5];

@@ -30,8 +30,12 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.cliDGV = new System.Windows.Forms.DataGridView();
+            this.ci = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ape = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dir = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehiDGV = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +45,11 @@
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioSeguro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ci = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ape = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dir = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alqDGV = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.alq_btn = new System.Windows.Forms.Button();
+            this.alqDGV = new System.Windows.Forms.DataGridView();
             this.client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.car = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f_alq = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,6 +88,43 @@
             this.cliDGV.TabIndex = 2;
             this.cliDGV.Visible = false;
             // 
+            // ci
+            // 
+            this.ci.Frozen = true;
+            this.ci.HeaderText = "Cédula";
+            this.ci.Name = "ci";
+            this.ci.ReadOnly = true;
+            this.ci.Width = 60;
+            // 
+            // nom
+            // 
+            this.nom.Frozen = true;
+            this.nom.HeaderText = "Nombre";
+            this.nom.Name = "nom";
+            this.nom.ReadOnly = true;
+            // 
+            // ape
+            // 
+            this.ape.Frozen = true;
+            this.ape.HeaderText = "Apellido";
+            this.ape.Name = "ape";
+            this.ape.ReadOnly = true;
+            // 
+            // dir
+            // 
+            this.dir.Frozen = true;
+            this.dir.HeaderText = "Dirección";
+            this.dir.Name = "dir";
+            this.dir.ReadOnly = true;
+            this.dir.Width = 250;
+            // 
+            // telf
+            // 
+            this.telf.Frozen = true;
+            this.telf.HeaderText = "Teléfono";
+            this.telf.Name = "telf";
+            this.telf.ReadOnly = true;
+            // 
             // vehiDGV
             // 
             this.vehiDGV.AllowUserToOrderColumns = true;
@@ -107,16 +145,6 @@
             this.vehiDGV.Size = new System.Drawing.Size(672, 311);
             this.vehiDGV.TabIndex = 3;
             this.vehiDGV.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(92, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Vehiculos";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // placa
             // 
@@ -186,9 +214,20 @@
             this.precioSeguro.Name = "precioSeguro";
             this.precioSeguro.Width = 65;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(92, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Vehiculos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel1
             // 
             this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.alq_btn);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
@@ -198,42 +237,25 @@
             this.panel1.Size = new System.Drawing.Size(694, 30);
             this.panel1.TabIndex = 5;
             // 
-            // ci
+            // button3
             // 
-            this.ci.Frozen = true;
-            this.ci.HeaderText = "Cédula";
-            this.ci.Name = "ci";
-            this.ci.ReadOnly = true;
-            this.ci.Width = 60;
+            this.button3.Location = new System.Drawing.Point(256, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Vehiculos Alquilados";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // nom
+            // alq_btn
             // 
-            this.nom.Frozen = true;
-            this.nom.HeaderText = "Nombre";
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            // 
-            // ape
-            // 
-            this.ape.Frozen = true;
-            this.ape.HeaderText = "Apellido";
-            this.ape.Name = "ape";
-            this.ape.ReadOnly = true;
-            // 
-            // dir
-            // 
-            this.dir.Frozen = true;
-            this.dir.HeaderText = "Dirección";
-            this.dir.Name = "dir";
-            this.dir.ReadOnly = true;
-            this.dir.Width = 250;
-            // 
-            // telf
-            // 
-            this.telf.Frozen = true;
-            this.telf.HeaderText = "Teléfono";
-            this.telf.Name = "telf";
-            this.telf.ReadOnly = true;
+            this.alq_btn.Location = new System.Drawing.Point(174, 4);
+            this.alq_btn.Name = "alq_btn";
+            this.alq_btn.Size = new System.Drawing.Size(75, 23);
+            this.alq_btn.TabIndex = 5;
+            this.alq_btn.Text = "Alquileres";
+            this.alq_btn.UseVisualStyleBackColor = true;
+            this.alq_btn.Click += new System.EventHandler(this.alq_btn_Click);
             // 
             // alqDGV
             // 
@@ -251,16 +273,6 @@
             this.alqDGV.Size = new System.Drawing.Size(672, 311);
             this.alqDGV.TabIndex = 6;
             this.alqDGV.Visible = false;
-            // 
-            // alq_btn
-            // 
-            this.alq_btn.Location = new System.Drawing.Point(174, 4);
-            this.alq_btn.Name = "alq_btn";
-            this.alq_btn.Size = new System.Drawing.Size(75, 23);
-            this.alq_btn.TabIndex = 5;
-            this.alq_btn.Text = "Alquileres";
-            this.alq_btn.UseVisualStyleBackColor = true;
-            this.alq_btn.Click += new System.EventHandler(this.alq_btn_Click);
             // 
             // client
             // 
@@ -348,5 +360,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn f_alq;
         private System.Windows.Forms.DataGridViewTextBoxColumn dias;
         private System.Windows.Forms.DataGridViewTextBoxColumn monto;
+        private System.Windows.Forms.Button button3;
     }
 }

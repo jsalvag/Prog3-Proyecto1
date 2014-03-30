@@ -20,8 +20,8 @@ namespace Prog3_Proyecto1
         private void button1_Click(object sender, EventArgs e)
         {
             cliDGV.Rows.Clear();
-            vehiDGV.Visible = false;
-            alqDGV.Visible = false;
+            vehiDGV.Hide();
+            alqDGV.Hide();
             cliDGV.Visible = true;
 
             foreach (C_CLIENTES cli in ppl.listas.listaClientes)
@@ -30,8 +30,8 @@ namespace Prog3_Proyecto1
         private void button2_Click(object sender, EventArgs e)
         {
             vehiDGV.Rows.Clear();
-            cliDGV.Visible = false;
-            alqDGV.Visible = false;
+            cliDGV.Hide();
+            alqDGV.Hide();
             vehiDGV.Visible = true;
 
             foreach (C_VEHICULOS vehi in ppl.listas.listaVehiculos)
@@ -41,12 +41,24 @@ namespace Prog3_Proyecto1
         private void alq_btn_Click(object sender, EventArgs e)
         {
             alqDGV.Rows.Clear();
-            cliDGV.Visible = false;
-            vehiDGV.Visible = false;
+            cliDGV.Hide();
+            vehiDGV.Hide();
             alqDGV.Visible = true;
 
             foreach (C_ALQUILER alq in ppl.listas.listaAlquiler)
                 alqDGV.Rows.Add(alq.datos());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            vehiDGV.Rows.Clear();
+            cliDGV.Hide();
+            alqDGV.Hide();
+            vehiDGV.Visible = true;
+
+            foreach (C_VEHICULOS vehi in ppl.listas.listaVehiculos)
+                if(vehi.datos()[6] == "En Alquiler")
+                    vehiDGV.Rows.Add(vehi.datos());
         }
     }
 }

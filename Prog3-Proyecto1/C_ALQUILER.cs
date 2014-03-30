@@ -34,10 +34,22 @@ namespace Prog3_Proyecto1
             string[] data = new string[5];
             data[0] = this.ciA;
             data[1] = this.placaA;
-            data[2] = Convert.ToString(this.f_alquiler);
+            data[2] = Convert.ToString(this.f_alquiler.Date);
             data[3] = Convert.ToString(this.dias);
             data[4] = Convert.ToString(this.monto);
             return data;
         }
+
+        public string getPlaca() { return this.placaA; }
+
+        public string getCedula() { return this.ciA; }
+
+        public DateTime getFecha() { return this.f_alquiler; }
+
+        public void setMonto(double m) { this.monto = m; }
+
+        public void setDias(int d) { this.dias = d; }
+
+
     }
 }

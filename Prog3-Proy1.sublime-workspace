@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"mon",
+				"monto"
+			],
+			[
 				"ta",
 				"tabla_user"
 			],
@@ -399,6 +403,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Prog3-Proyecto1/ppl2.Designer.cs",
+			"settings":
+			{
+				"buffer_size": 43811,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -436,6 +448,15 @@
 	},
 	"file_history":
 	[
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/C_CLIENTES.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/C_VEHICULOS.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/C_ALQUILER.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/ppl.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/ppl.Designer.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/Reportes.Designer.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/C_LISTAS.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/Listados.cs",
+		"/C/Users/JSalvaG/Documentos/UniMar/Semestre IV Feb-Jun 2014/Programacion III/Prog3-Proyecto1/Prog3-Proyecto1/RegCliente.cs",
 		"/D/Descargas/numero.txt",
 		"/C/Users/JSalvaG/Documentos/mama",
 		"/C/Users/JSalvaG/Documents/Visual Studio 2012/Projects/Prog3-clase1/Prog3-clase1/C_ESTUDIANTES.cs",
@@ -543,6 +564,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Hide()",
+			"Visible = false",
+			",",
+			"cliente",
+			"clientes",
+			"=",
+			"ci",
+			"private",
+			"placa",
+			"private",
+			"ci",
 			"Double",
 			"double",
 			"cemail",
@@ -659,18 +691,7 @@
 			"indice+1",
 			"Martes",
 			"        ",
-			"                ",
-			"        ",
-			"              ",
-			"        ",
-			"                ",
-			"        ",
-			"                        ",
-			"                                ",
-			"                                        ",
-			"                                                ",
-			"                                        ",
-			"                                "
+			"                "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -678,6 +699,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Hide()"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -688,8 +710,49 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Prog3-Proyecto1/ppl2.Designer.cs",
+					"settings":
+					{
+						"buffer_size": 43811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11818,
+								11818
+							],
+							[
+								17667,
+								17667
+							],
+							[
+								26072,
+								26072
+							],
+							[
+								32531,
+								32531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 6,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2782.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
