@@ -407,7 +407,15 @@
 			"file": "Prog3-Proyecto1/ppl2.Designer.cs",
 			"settings":
 			{
-				"buffer_size": 43811,
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/JSalvaG/Desktop/asd.cs",
+			"settings":
+			{
+				"buffer_size": 98,
 				"line_ending": "Windows"
 			}
 		}
@@ -710,7 +718,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -718,27 +726,15 @@
 					"file": "Prog3-Proyecto1/ppl2.Designer.cs",
 					"settings":
 					{
-						"buffer_size": 43811,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11818,
-								11818
-							],
-							[
-								17667,
-								17667
-							],
-							[
-								26072,
-								26072
-							],
-							[
-								32531,
-								32531
+								0,
+								0
 							]
 						],
 						"settings":
@@ -749,6 +745,32 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 2782.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/JSalvaG/Desktop/asd.cs",
+					"settings":
+					{
+						"buffer_size": 98,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

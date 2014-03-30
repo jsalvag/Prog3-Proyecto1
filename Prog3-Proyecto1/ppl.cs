@@ -264,7 +264,7 @@ namespace Prog3_Proyecto1
         {
             if (recFecha_dtp.Value >= DateTime.Today)
             {
-                C_ALQUILER ent = listas.listaAlquiler.FirstOrDefault(o => o.getPlaca() == recVehi_cbox.Text);
+                C_ALQUILER ent = listas.listaAlquiler.Where(o => (o.getPlaca() == recVehi_cbox.Text) && (o.getStat())).First();
                 C_CLIENTES cli = listas.listaClientes.FirstOrDefault(c => c.datos()[0] == ent.datos()[0]);
                 C_VEHICULOS vei = listas.listaVehiculos.First(v => v.datos()[0] == ent.datos()[1]);
                 recNom_box.Text = cli.datos()[0] + "- " + cli.datos()[1] + " " + cli.datos()[2];
@@ -290,6 +290,7 @@ namespace Prog3_Proyecto1
             C_VEHICULOS vei = listas.listaVehiculos.First(v => v.datos()[0] == ent.datos()[1]);
             ent.setDias(Convert.ToInt16(recDias_box.Text));
             ent.setMonto(Convert.ToDouble(recMonto_box.Text));
+            ent.setStat(false);
             vei.setEstado(true);
             vei.setKm(Convert.ToDouble(recKm_box.Text));
             recib_pan.Hide();

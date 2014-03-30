@@ -39,7 +39,7 @@ namespace Prog3_Proyecto1
                 return false;
             else
             {
-                listaAlquiler.Add(alq);
+                listaAlquiler.Insert(0,alq);
                 return true;
             }
         }

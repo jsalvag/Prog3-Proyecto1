@@ -55,6 +55,7 @@
             this.f_alq = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cliDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiDGV)).BeginInit();
             this.panel1.SuspendLayout();
@@ -267,7 +268,8 @@
             this.car,
             this.f_alq,
             this.dias,
-            this.monto});
+            this.monto,
+            this.prceso});
             this.alqDGV.Location = new System.Drawing.Point(10, 63);
             this.alqDGV.Name = "alqDGV";
             this.alqDGV.Size = new System.Drawing.Size(672, 311);
@@ -308,6 +310,13 @@
             this.monto.HeaderText = "Monto Alquiler";
             this.monto.Name = "monto";
             this.monto.ReadOnly = true;
+            // 
+            // prceso
+            // 
+            this.prceso.Frozen = true;
+            this.prceso.HeaderText = "Proceso";
+            this.prceso.Name = "prceso";
+            this.prceso.ReadOnly = true;
             // 
             // Listados
             // 
@@ -355,11 +364,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telf;
         private System.Windows.Forms.Button alq_btn;
         private System.Windows.Forms.DataGridView alqDGV;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn client;
         private System.Windows.Forms.DataGridViewTextBoxColumn car;
         private System.Windows.Forms.DataGridViewTextBoxColumn f_alq;
         private System.Windows.Forms.DataGridViewTextBoxColumn dias;
         private System.Windows.Forms.DataGridViewTextBoxColumn monto;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prceso;
     }
 }
