@@ -136,9 +136,9 @@
             // 
             this.vehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem1});
-            this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
+            this.vehiculosToolStripMenuItem.Name = "vehículosToolStripMenuItem";
             this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.vehiculosToolStripMenuItem.Text = "Vehiculos";
+            this.vehiculosToolStripMenuItem.Text = "Vehículos";
             // 
             // registrarToolStripMenuItem1
             // 
@@ -601,7 +601,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(51, 13);
             this.label15.TabIndex = 3;
-            this.label15.Text = "Vehiculo:";
+            this.label15.Text = "Vehículo:";
             // 
             // label14
             // 
@@ -758,7 +758,7 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(51, 13);
             this.label20.TabIndex = 3;
-            this.label20.Text = "Vehiculo:";
+            this.label20.Text = "Vehículo:";
             // 
             // label23
             // 
@@ -792,7 +792,7 @@
             this.MainMenuStrip = this.menu;
             this.Name = "ppl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alquiler de Vehiculos";
+            this.Text = "Alquiler de Vehículos";
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.regCli_pan.ResumeLayout(false);

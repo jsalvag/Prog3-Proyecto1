@@ -169,7 +169,7 @@ namespace Prog3_Proyecto1
                         }
                         else
                         {
-                            MessageBox.Show("Debe seleccionar un vehiculo de la lista");
+                            MessageBox.Show("Debe seleccionar un vehículo de la lista");
                             regAalq_pan.Hide();
                             regVehi_pan.Show();
                         }
@@ -249,7 +249,7 @@ namespace Prog3_Proyecto1
                 }
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un vehiculo registrado");
+                    MessageBox.Show("Debe seleccionar un vehículo registrado");
                     vehi_cbox.Focus();
                 }
             }
@@ -262,17 +262,26 @@ namespace Prog3_Proyecto1
 
         private void recVehi_cbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            C_ALQUILER ent = listas.listaAlquiler.FirstOrDefault(o => o.getPlaca() == recVehi_cbox.Text);
-            C_CLIENTES cli = listas.listaClientes.FirstOrDefault(c => c.datos()[0] == ent.datos()[0]);
-            C_VEHICULOS vei = listas.listaVehiculos.First(v => v.datos()[0] == ent.datos()[1]);
-            recNom_box.Text = cli.datos()[0] + "- " + cli.datos()[1] + " " + cli.datos()[2];
-            recDias_box.Text = Convert.ToString(recFecha_dtp.Value.Date - ent.getFecha().Date).Split('.')[0];
-            if(recDias_box.Text == "00:00:00")
-                recDias_box.Text = "0";
-            recMonto_box.Text = Convert.ToString((Convert.ToDouble(vei.datos()[7]) * Convert.ToInt16(recDias_box.Text) ) + Convert.ToDouble(vei.datos()[8]));
-            recKm_box.Text = vei.datos()[4];
+            if (recFecha_dtp.Value >= DateTime.Today)
+            {
+                C_ALQUILER ent = listas.listaAlquiler.FirstOrDefault(o => o.getPlaca() == recVehi_cbox.Text);
+                C_CLIENTES cli = listas.listaClientes.FirstOrDefault(c => c.datos()[0] == ent.datos()[0]);
+                C_VEHICULOS vei = listas.listaVehiculos.First(v => v.datos()[0] == ent.datos()[1]);
+                recNom_box.Text = cli.datos()[0] + "- " + cli.datos()[1] + " " + cli.datos()[2];
+                recDias_box.Text = Convert.ToString(recFecha_dtp.Value.Date - ent.getFecha().Date).Split('.')[0];
+                if (recDias_box.Text == "00:00:00")
+                    recDias_box.Text = "0";
+                recMonto_box.Text = Convert.ToString((Convert.ToDouble(vei.datos()[7]) * Convert.ToInt16(recDias_box.Text)) + Convert.ToDouble(vei.datos()[8]));
+                recKm_box.Text = vei.datos()[4];
 
-            recib_btn.Enabled = true;
+                recib_btn.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fecha válida");
+                recFecha_dtp.Value = DateTime.Today;
+                recFecha_dtp.Focus();
+            }
         }
 
         private void recib_btn_Click(object sender, EventArgs e)
